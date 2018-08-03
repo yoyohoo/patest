@@ -9,7 +9,6 @@
 </head>
 
 <body>
-	<p id="pt"></p>
 	<input id="title" />
 	<button id="ct">点击更换抬头</button>
 	<br />
@@ -20,12 +19,9 @@
 			alert('你点击了返回按钮');
 		}
 
-            App.call('isPamo', function () {
-                pt.innerText = 'klpa'
-            })
-		var platform = 'WAP';
-		App && App.hasOwnProperty('isPamo') && (platform = 'klpa');
-		alert(platform)
+		App.call('isPamo', function () {
+			alert('klpa')
+		})
 
 		document.getElementById('ct').onclick = function () {
 			// 显示抬头
