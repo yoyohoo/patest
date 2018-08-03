@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./pamo.js"></script>
+</head>
+<body>
+	<input id="title" />
+	<button id="ct">点击更换抬头</button>
+	<br />
+	<button id="pas">点击获取pasession</button>
+	<p id="pas"></p>
+	<script type="text/javascript">
+		window.back = function() {
+			alert('你点击了返回按钮');
+		}
+
+		document.getElementById('ct').onclick = function() {
+			// 显示抬头
+			alert(document.getElementById('title').value);
+			App.call('changeTitle', document.getElementById('title').value);
+		}
+		document.getElementById('pas').onclick = function() {
+			App.call('getPasession', function(pasession) {
+				alert('pasession:' + pasession);
+			});
+		}
+    window.dropMenu = function(type){
+        alert(type);
+    }
+	</script>
+</body>
+</html>
